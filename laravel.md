@@ -41,6 +41,20 @@ List available Artisan commands
 ```
 php artisan list
 ```
+Storage Link
+```
+php artisan storage:link
+```
+Storage Link using PHP Function
+```
+Route::get('/storage-link-php', function(){
+    $target = storage_path('app/public');
+    $link = public_path('/storage');
+    symlink($target, $link);
+    echo "symbolic link created successfully";
+});
+```
+
 Set database string
 ```
 Update your /app/Providers/AppServiceProvider.php to contain:
