@@ -1,3 +1,3 @@
 # My Programming Cheatsheet
 ## Laravel
--  [Migrations](https://github.com/LouisPetrik/cheatsheet/blob/master/go.md#hello-world)
+-  [Migrations](https://github.com/iamwebsurgeon/cheat-sheet/blob/main/laravel.md#migrations)
