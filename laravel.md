@@ -5,6 +5,7 @@
 
 
 ### Basics
+#### Cache
 Clearing the configuration cache
 ```
 php artisan config:clear
@@ -13,6 +14,7 @@ Reset configuration cache after clearing them
 ```
 php artisan config:cache
 ```
+#### Routes
 Clear all route cache
 ```
 php artisan route:clear
@@ -21,6 +23,7 @@ To cache your routes again
 ```
 php artisan route:cache
 ```
+#### Views
 Clear all compiled views cache
 ```
 php artisan view:clear
@@ -33,6 +36,7 @@ To clear all Laravel's cache
 ```
 php artisan optimize:clear
 ```
+#### Others
 List available Artisan commands
 ```
 php artisan list
