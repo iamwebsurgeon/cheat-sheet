@@ -3,8 +3,32 @@
 -  [Basics](https://github.com/iamwebsurgeon/cheat-sheet/blob/main/laravel.md#basics)
 -  [Migrations](https://github.com/iamwebsurgeon/cheat-sheet/blob/main/laravel.md#migration)
 
-
 ### Basics
+```
+Route::get('/cache-clear', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});
+Route::get('/optimize-clear', function() {
+    Artisan::call('optimize:clear');
+    return "Optimize Clear Successfully";
+});
+Route::get('/optimize', function() {
+    Artisan::call('optimize');
+    return "Optimize Successfully";
+});
+
+Route::get('/storage-link', function() {
+    Artisan::call('storage:link');
+    return "Storage Link has been created Successfully";
+});
+Route::get('/storage-link-php', function(){
+    $target = storage_path('app/public');
+    $link = public_path('/storage');
+    symlink($target, $link);
+    echo "symbolic link created successfully";
+});
+```
 #### Cache
 Clearing the configuration cache
 ```
