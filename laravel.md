@@ -4,6 +4,14 @@
 -  [Migrations](https://github.com/iamwebsurgeon/cheat-sheet/blob/main/laravel.md#migration)
 
 ### Basics
+Set database string
+```
+Update your /app/Providers/AppServiceProvider.php to contain:
+use Illuminate\Support\Facades\Schema;
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
 ```
 Route::get('/cache-clear', function() {
     Artisan::call('cache:clear');
@@ -78,15 +86,6 @@ Route::get('/storage-link-php', function(){
     echo "symbolic link created successfully";
 });
 ```
-
-Set database string
-```
-Update your /app/Providers/AppServiceProvider.php to contain:
-use Illuminate\Support\Facades\Schema;
-public function boot()
-{
-    Schema::defaultStringLength(191);
-}
 ```
 ### Migration
 For migrating specific migration file
