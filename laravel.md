@@ -13,6 +13,29 @@ public function boot()
     Schema::defaultStringLength(191);
 }
 ```
+Install Jetstream Livewire Stack
+```
+composer require laravel/jetstream
+```
+Install Jetstream With Livewire
+```
+php artisan jetstream:install livewire
+or
+php artisan jetstream:install livewire --teams
+```
+Or, Install Jetstream With Inertia
+```
+php artisan jetstream:install inertia
+php artisan jetstream:install inertia --teams
+```
+
+#Finalizing The Installation
+```
+npm install
+npm run build
+php artisan migrate
+```
+
 Route::get('/cache-clear', function() {
     Artisan::call('cache:clear');
     return "Cache is cleared";
