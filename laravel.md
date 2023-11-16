@@ -116,5 +116,14 @@ For migrating specific migration file
 php artisan migrate:refresh --path=database/migrations/2021_05_01_092040_create_products_table.php
 ```
 
+### Remove Public from Laravel Project using htaccess
+```
+<IfModule mod_rewrite.c>
+   RewriteEngine On 
+   RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+```
+
+
 
 
